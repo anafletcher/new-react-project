@@ -12,3 +12,17 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.App-footer p {
+  font-size: 15px;
+  font-family: fantasy;
+}
+
+.App-footer a {
+  color: aqua;
+  font-weight: bold;
+}
+
+.App-footer a:hover {
+  color: orange;
+}
