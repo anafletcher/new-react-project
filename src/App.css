@@ -1,9 +1,5 @@
-.App {
-  text-align: center;
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color: #5870a0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,7 +15,7 @@
 }
 
 .App-footer a {
-  color: aqua;
+  color: rgb(209, 103, 232);
   font-weight: bold;
 }
 

@@ -30,28 +30,42 @@ export default function Weather() {
   }
 
   let form = (
-    <form className="Weather" onSubmit={handleSubmit}>
-      <input type="search" placeholder="Enter a city" onChange={upadteCity} />
-      <input type="submit" value="search" />
+    <form className="WeatherForm" onSubmit={handleSubmit}>
+      <div className="row">
+        <div className="col-9">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            onChange={upadteCity}
+          />
+        </div>
+        <div className="col-3">
+          <input type="submit" value="search" />
+        </div>
+      </div>
     </form>
   );
 
   if (loaded) {
     return (
-      <div>
+      <div className="WeatherDisplay">
         {form}
 
-        <h3>
-          {city} is currently experiencig {weather.description}...
-        </h3>
+        <h2>{city}</h2>
         <ul>
-          <li>Temperature: {weather.temperature}°C</li>
-          <li>Humidity: {weather.humidity}%</li>
-          <li>Wind Speed: {weather.wind}m/s</li>
-          <li>
-            <img src={weather.icon} alt="weather icon" />
-          </li>
+          <li>Monday 4th November 2025 10:45am</li>
+          <li>Current Weather: {weather.description}</li>
         </ul>
+        <div className="row">
+          <div className="col-6">
+            <img src={weather.icon} alt="weather icon" />
+            {weather.temperature}°C
+          </div>
+          <div className="col-6">
+            <li>Humidity: {weather.humidity}%</li>
+            <li>Wind Speed: {weather.wind}m/s</li>
+          </div>
+        </div>
       </div>
     );
   } else {
